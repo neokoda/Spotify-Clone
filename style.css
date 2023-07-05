@@ -1,0 +1,465 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fonts/Gotham-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('./fonts/Gotham-Light.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(150, 150, 150);
+}
+
+html {
+    background-color: rgb(5, 5, 5);
+    color: rgb(150, 150, 150);
+    font-family: 'Gotham';
+}
+
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.light-up {
+    color: rgb(150, 150, 150);
+    transition: color 0.5s ease;
+}
+
+.light-up:hover {
+    color: rgb(255, 255, 255);
+}
+
+#main-grid {
+    display: grid;
+    grid-template: 2fr 8fr / 21fr 79fr;
+    height: 86vh;
+}
+
+.container {
+    background-color: rgb(18, 18, 18);
+    margin: 4px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation {
+    grid-area: 1 / 1 / span 1 / span 1;
+    font-size: 15px;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.nav-element {
+    margin: 0.75rem 1.25rem;
+}
+
+.nav-element div {
+    display: inline-flex;
+}
+
+.nav-element a {
+    display: flex;
+    align-items: baseline;
+}
+
+#navigation i, #library i {
+    font-size: 21px;
+}
+
+.icon-wrapper {
+    height: 1.1em;
+    width: 1.1em;   
+}
+
+.nav-title {
+    margin-left: 1.5rem;
+}
+
+#plus-button {
+    font-size: 18px;                                                                                                   
+    border-radius: 100px;
+    height: 1.7rem;
+    width: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plus-button:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+#library {
+    grid-area: 2 / 1 / span 1 / span 1;
+    font-size: 15px;
+}
+
+#library header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem 1rem 1.25rem;
+}
+
+#your-library div {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.6rem;
+}
+
+#library main {
+    height: 125px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#library main:hover {
+    overflow-y: auto;
+}
+
+.library-sub {
+    color: rgb(255, 255, 255);
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
+
+.library-sub p {
+    padding-left: 1.3rem;
+}
+
+.library-sub .subtext {
+    font-size: 13.5px;
+    font-family: 'Gotham-Light';
+}
+
+.white-button {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-radius: 1000px;
+    width: 7rem;
+    text-align: center;
+    font-size: 13.5px;
+    padding: 0.5rem;
+    margin: 0.75rem 1.5rem;
+    transition: transform 0.01s ease;
+}
+
+.white-button:hover {
+    transform: scale(1.03);
+}
+
+#footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0.5rem;
+    font-family: 'Gotham-Light';
+    font-size: 10px;
+}   
+
+#footer-links div {
+    margin: 0.5rem;
+}
+
+#footer-links div a {
+    margin: 0.3rem;
+}
+
+#language-button a {
+    border-radius: 1000px;
+    border: 1px solid rgb(150, 150, 150);
+    text-align: center;
+    margin: 1.5rem;
+    width: 7em;
+    height: 2.5em;
+    padding: 0 0.15em 0.15em 0;
+    color: rgb(255, 255, 255);
+    font-size: 13.5px;
+    transition: transform 0.01s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#language-button i {
+    font-size: 17px;
+    margin: 0.25rem;
+}
+
+#language-button:hover {
+    transform: scale(1.02);
+}
+
+#main-window {
+    grid-area: 1 / 2 / span 2 / span 1;
+    background-image: linear-gradient(to bottom, rgb(30, 30, 30) 30%, rgb(18, 18, 18) 60%);
+    border-radius: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#main-window:hover {
+    overflow-y: scroll;
+}
+
+#main-window header {
+    padding: 0.4rem;
+    background-color: rgb(15, 15, 15);
+    border-radius: 10px 0 0 0;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 76.55%;
+}
+
+#main-window main {
+    margin-top: 70px;
+}
+
+.circle-button {
+    background-color: rgb(10, 10, 10);
+    font-family: 'Gotham-Light';
+    font-size: 24px;
+    border-radius: 1000px;
+    height: 2.25rem;
+    width: 2.25rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-buttons {
+    padding-left: 1rem;
+}
+
+#main-window-links div {
+    display: inline-block;
+    margin: 0rem 0.75rem;
+    font-size: 14.5px;
+}
+
+#main-window-links #misc-links {
+    letter-spacing: 1.5px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.enlarge:hover {
+    font-size: 1.075em;
+    color: rgb(255, 255, 255);
+}
+
+#sign-in-links .white-button {
+    width: 6.75rem;
+    padding: 1rem 0;
+    font-size: 14.5px;
+}
+
+#sign-in-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.underscore:hover {
+    text-decoration: underline;
+}
+
+.whiten:hover {
+    color: rgb(255, 255, 255);
+}
+
+.section-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.25rem 1.5rem;
+}
+
+.section-text .section-title {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+.section-text .show-all {
+    color: rgb(150, 150, 150);
+    font-size: 13px;
+}
+
+.playlist-collection {
+    display: grid;
+    margin: 1.25rem 1.5rem;
+    grid-auto-columns: 210px;
+    grid-auto-flow: column;
+}
+
+.playlist {
+    background-color: rgb(25, 25, 25);
+    height: 260px;
+    width: 150px;
+    border-radius: 7.5px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.1rem;
+    transition: background-color 0.25s ease;
+    position: relative;
+}
+
+.playlist * {
+    display: block;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.playlist img {
+    height: 150px;
+    border-radius: 5px;
+    filter: drop-shadow(10px 10px 10px rgb(5, 5, 5))
+}
+
+.playlist:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.playlist-title {
+    font-size: 14.5px;
+    color: rgb(255, 255, 255);
+}
+
+.playlist-description {
+    font-family: 'Gotham-Light';
+    font-size: 13px;   
+}
+
+.play-button {
+    height: 2.2em;
+    width: 2.2em;
+    background-color: none;
+    color: transparent;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10em;
+    font-size: 22px;
+    position: absolute;
+    top: 125px;
+    left: 115px;
+    display: flex;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, top 0.3s ease;
+}
+
+.playlist:hover .play-button {
+    background-color: rgb(5, 200, 110);
+    color: rgb(0, 0, 0);
+    top: 105px;
+  }
+
+.play-button:hover {
+    transform: scale(1.025);
+}
+
+.play-button i {
+    margin-left: 0.1em;
+}
+
+#preview-banner {
+    background-image: linear-gradient(to right, rgb(202, 0, 135), rgb(43, 160, 249));
+    height: 11vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-side-banner {
+    font-family: 'Gotham-Light';
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    margin: 1rem;
+    line-height: 0.5rem;
+}
+
+#sign-up-message {
+    font-family: 'Gotham';
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+#preview-banner .white-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 9rem;
+}
+
+#main-window footer #top-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 220px) 330px;
+    margin: 1.5rem;  
+}
+
+#main-window footer a {
+    font-size: 14px;
+    font-family: 'Gotham-Light';
+    line-height: 2rem;
+}
+
+#main-window footer p {
+    font-size: 14px;
+    display:  block;
+    color: rgb(255, 255, 255);
+}
+
+#line {
+    border: 1px solid rgb(40, 40, 40);
+}
+
+#bottom-footer {
+    margin: 1.5rem;
+    font-family: 'Gotham-Light';
+    color: rgb(255, 255, 255);
+}
+
+#top-footer .circle-button {
+    background-color: rgb(40, 40, 40);
+    margin: 0.25rem;
+}
+
+#top-footer .circle-button i {
+    font-size: 18px;
+    padding: 0.4em 0 0 0em;
+}
+
+#social-media {
+    justify-self: end;
+    color: rgb(255, 255, 255);
+}
+
+#social-media .circle-button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+#bottom-footer {
+    font-size: 13px;
+}
+
+#right-side-banner .white-button {
+    color: rgb(0, 0, 0);
+}
